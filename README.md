@@ -1,8 +1,4 @@
-Symfony Standard Edition
-========================
-
-Welcome to the Symfony Standard Edition - a fully-functional Symfony
-application that you can use as the skeleton for your new applications.
+A fully-functional Symfony application that you can use as the skeleton for your new PHP applications on Bluemix.
 
 For details on how to download and get started with Symfony, see the
 [Installation][1] chapter of the Symfony Documentation.
@@ -82,10 +78,3 @@ For details on how to download and get started with Symfony, see the
 ## Resources
 
 [1]:  https://symfony.com/doc/3.0/book/installation.html
-[6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  https://symfony.com/doc/3.0/book/doctrine.html
-[8]:  https://symfony.com/doc/3.0/book/templating.html
-[9]:  https://symfony.com/doc/3.0/book/security.html
-[10]: https://symfony.com/doc/3.0/cookbook/email.html
-[11]: https://symfony.com/doc/3.0/cookbook/logging/monolog.html
-[13]: https://symfony.com/doc/3.0/bundles/SensioGeneratorBundle/index.html

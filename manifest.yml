@@ -5,5 +5,5 @@ applications:
   memory: 256M
   instances: 1
   env:
-    BP_DEBUG: true
+    #BP_DEBUG: true
     SYMFONY_ENV: prod
