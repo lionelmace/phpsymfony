@@ -9,7 +9,7 @@ For details on how to download and get started with Symfony, see the
 1. Create Project
 
   ```
-  composer create-project symfony/framework-standard-edition:^3.0 phpsymfony
+  composer create-project symfony/framework-standard-edition:^3.1 phpsymfony
   ```
 
   Note: When being asked the database parameters, keep the default.
@@ -46,7 +46,6 @@ For details on how to download and get started with Symfony, see the
     memory: 256M
     instances: 1
     env:
-      BP_DEBUG: true
       SYMFONY_ENV: prod
   ````
 
@@ -68,7 +67,7 @@ For details on how to download and get started with Symfony, see the
   error_reporting = E_ALL
   ```
 
-1. Added file .cfignore
+1. Add two files .cfignore and .gitignore with the following content:
 
   ```
   vendor/
