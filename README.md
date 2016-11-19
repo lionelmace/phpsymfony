@@ -7,56 +7,79 @@ application that you can use as the skeleton for your new applications.
 For details on how to download and get started with Symfony, see the
 [Installation][1] chapter of the Symfony Documentation.
 
-What's inside?
---------------
 
-The Symfony Standard Edition is configured with the following defaults:
+## Scenario
 
-  * An AppBundle you can use to start coding;
+1. Create Project
 
-  * Twig as the only configured template engine;
+  ```
+  composer create-project symfony/framework-standard-edition:^3.0 phpsymfony
+  ```
 
-  * Doctrine ORM/DBAL;
+  Note: When being asked the database parameters, keep the default.
+  
+1. Test locally
 
-  * Swiftmailer;
+  ```
+  php bin/console server:run
+  ```
 
-  * Annotations enabled for everything.
+1. Open the URL in the browser. You should see Welcome to Symphony 3.1.6
 
-It comes pre-configured with the following bundles:
+1. Update the PHP version used in two place in the composer.json
 
-  * **FrameworkBundle** - The core Symfony framework bundle
+  ```
+  "require": {
+    "php": ">=7.0.12”,
+    "symfony/symfony": "3.1.*",
+  }
+  "config": {
+    "platform": {
+      "php": "7.0.12"
+    }
+  },
+  ```
 
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
+1. Add manifest.yml
 
-  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
+  ```
+  ---
+  applications:
+  - name: phpsymfony
+    host: phpsymfony
+    memory: 256M
+    instances: 1
+    env:
+      BP_DEBUG: true
+      SYMFONY_ENV: prod
+  ````
 
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
+1. Add options.json in folder .bp-config
 
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
+  ```
+  {
+    "PHP_VERSION": "{PHP_70_LATEST}",
+    "WEBDIR": "web",
+    "COMPOSER_VENDOR_DIR": "vendor"
+  }
+  ```
 
-  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
-    sending emails
+1. Add .user.ini file in root directory
 
-  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
+  ```
+  # Display PHP errors in the web page when failing
+  display_errors = On
+  error_reporting = E_ALL
+  ```
 
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
+1. Added file .cfignore
 
-  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
-    configuring and working with Symfony distributions
+  ```
+  vendor/
+  web/bundles
+  ````
 
-  * [**SensioGeneratorBundle**][13] (in dev/test env) - Adds code generation
-    capabilities
-
-  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
-    integration
-
-All libraries and bundles included in the Symfony Standard Edition are
-released under the MIT or BSD license.
-
-Enjoy!
+## Resources
 
 [1]:  https://symfony.com/doc/3.0/book/installation.html
 [6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
