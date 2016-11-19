@@ -1,0 +1,9 @@
+---
+applications:
+- name: phpsymfony
+  host: phpsymfony
+  memory: 256M
+  instances: 1
+  env:
+    BP_DEBUG: true
+    SYMFONY_ENV: prod
