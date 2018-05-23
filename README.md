@@ -20,6 +20,9 @@ For details on how to download and get started with Symfony, see the
     php bin/console server:run
     ```
 
+    > If you get a Warning: date_default_timezone_get(), find your php.ini file with the following command: php -i | grep php.ini
+    > And then search for date.timezone and set it to "Europe/Amsterdam".
+
 1. Open the URL in the browser. You should see Welcome to Symphony 3.1.6
 
 1. Update the PHP version used in two place in the composer.json

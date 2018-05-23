@@ -1,9 +1,9 @@
 ---
 applications:
 - name: phpsymfony
-  host: phpsymfony
   memory: 256M
   instances: 1
+  buildpack: php_buildpack
   env:
     #BP_DEBUG: true
     SYMFONY_ENV: prod
